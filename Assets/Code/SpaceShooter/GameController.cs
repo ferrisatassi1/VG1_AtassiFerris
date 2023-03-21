@@ -33,8 +33,8 @@ namespace SpaceShooter {
 			Transform randomSpawnPoints = spawnPoints[randomSpawnIndex];
 			int randomAsteroidIndex = UnityEngine.Random.Range(0, asteroidPrefabs.Length);
 			GameObject randomAsteroidPrefab = asteroidPrefabs[randomAsteroidIndex];
-
-			Instantiate(randomAsteroidPrefab, randomSpawnPoints.position, Quaternion.identity);
+			Vector3 position = new Vector3(randomSpawnPoints.position.x,randomSpawnPoints.position.y,0);
+			Instantiate(randomAsteroidPrefab, position , Quaternion.identity);
 		}
 
 		void Start(){

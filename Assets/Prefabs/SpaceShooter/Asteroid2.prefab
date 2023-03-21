@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8972162903380757816}
   - component: {fileID: 8972162903380757819}
   - component: {fileID: 2728152571409777820}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Asteroid2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 8972162903380757813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -158,17 +158,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.1875, y: 0.28125}
-      - {x: -0.020833334, y: 0.40625}
-      - {x: -0.2916667, y: 0.40625}
-      - {x: -0.33333334, y: 0.28125}
-      - {x: -0.375, y: 0.13541667}
-      - {x: -0.375, y: -0.21875}
-      - {x: -0.3125, y: -0.40625}
-      - {x: -0.083333336, y: -0.40625}
-      - {x: 0.1875, y: -0.28125}
-      - {x: 0.375, y: -0.114583336}
-      - {x: 0.375, y: 0.15625}
+    - - {x: -0.29166666, y: 0.29166666}
+      - {x: -0.29166666, y: -0.29166666}
+      - {x: 0.2638889, y: -0.29166666}
+      - {x: 0.29166666, y: -0.23611112}
+      - {x: 0.29166666, y: 0.18055555}
+      - {x: 0.18055555, y: 0.29166666}
   m_UseDelaunayMesh: 0
 --- !u!114 &2728152571409777820
 MonoBehaviour:

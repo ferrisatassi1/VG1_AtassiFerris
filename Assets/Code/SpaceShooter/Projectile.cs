@@ -52,6 +52,7 @@ namespace SpaceShooter
 
         void OnCollisionEnter2D(Collision2D other)
         {
+			Debug.Log("collision occurs");
             if (other.gameObject.GetComponent<Asteroid>())
             {
                 Destroy(other.gameObject);
