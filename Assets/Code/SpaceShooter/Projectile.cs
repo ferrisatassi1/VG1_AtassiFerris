@@ -36,8 +36,8 @@ namespace SpaceShooter
 
         void Update()
         {
-            float acceleration = 1f;
-            float maxSpeed = 2f;
+            float acceleration = GameController.instance.missileSpeed/2f;
+            float maxSpeed = GameController.instance.missileSpeed;
             ChooseNearestTarget();
             if (target != null)
             {
@@ -52,7 +52,6 @@ namespace SpaceShooter
 
         void OnCollisionEnter2D(Collision2D other)
         {
-			Debug.Log("collision occurs");
             if (other.gameObject.GetComponent<Asteroid>())
             {
                 Destroy(other.gameObject);
@@ -65,6 +64,7 @@ namespace SpaceShooter
                 Quaternion.identity
             );
             Destroy(explosion, 0.25f);
+			GameController.instance.EarnPoints(10);
         }
 
         // Update is called once per frame
