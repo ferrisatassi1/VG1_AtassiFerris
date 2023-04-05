@@ -62,9 +62,9 @@ namespace SpaceShooter
 
 		void onCollisionEnter2D(Collision2D other){
 			if(other.gameObject.GetComponent<Asteroid>()){
-				TakeDamage(10f);
-				Debug.Log("test");
+				TakeDamage(10f);	
 			}
+			Debug.Log("test");
 		}
 
 		public void RepairHull(){
