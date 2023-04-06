@@ -53,18 +53,17 @@ namespace SpaceShooter
 		void TakeDamage(float damageAmount)
 		{
 			health -= damageAmount;
-			Debug.Log("test");
 			if(health <= 0){
 				Die();
 			}
 			imageHealthBar.fillAmount = health/healthMax;
 		}
 
-		void onCollisionEnter2D(Collision2D other){
+		void OnCollisionEnter2D(Collision2D other){
 			if(other.gameObject.GetComponent<Asteroid>()){
 				TakeDamage(10f);	
 			}
-			Debug.Log("test");
+			Debug.Log("test"); 
 		}
 
 		public void RepairHull(){

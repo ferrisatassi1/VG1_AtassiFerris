@@ -25,6 +25,8 @@ namespace SpaceShooter {
 		public int score;
 		public int money;
 		public float missileSpeed = 2f;
+
+		public float firingDelay = 1f;
 		public float bonusMultiplyer = 1f;
 
     	// Start is called before the first frame update
@@ -48,12 +50,13 @@ namespace SpaceShooter {
 		}
 		public void UpgradeMissileSpeed()
 		{
-			int cost = Mathf.RoundToInt(25 * missileSpeed);
-			if (cost <= money)
+			int cost = 100 + Mathf.RoundToInt((1f - firingDelay) * 100f);
+			if (GameController.instance.money >= cost)
 			{
-				money -= cost;
-				missileSpeed += 1f;
-				missileSpeedUpgradeText.text = "Missile Speed $" + Mathf.RoundToInt(25 * missileSpeed);
+				GameController.instance.money -= cost;
+				firingDelay -= 0.05f;
+				int newCost = 100 + Mathf.RoundToInt((1f - firingDelay) * 100f);
+				missileSpeedUpgradeText.text = "Fire Speed $" + newCost;
 			}
 		}
 
